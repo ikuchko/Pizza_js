@@ -33,6 +33,12 @@ Pizza.prototype.pizzaCost = function () {
   return cost -= 0.01;
 }
 
+function Order (customer, pizzaAmount) {
+  this.customer = customer;
+  this.pizzaAmount = pizzaAmount;
+  this.pizzas = [];
+}
+
 function Topping (toppingName) {
   this.toppingName = toppingName;
 }
