@@ -1,0 +1,37 @@
+body {
+  background: url("http://www.italia.it/fileadmin/src/img/cluster_gallery/mangiare_bere/la_pizza/_0004_pizza_focaccia.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;
+}
+
+.container-margin {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+fieldset {
+  text-align: center;
+  /*width: 270px;*/
+  padding: 20px;
+  background-color: rgba(238,251,227,0.62);
+  box-shadow: 0 0 50px 1px;
+  border-radius: 10px;
+}
+
+#ingredients-block, #result-block  {
+  display: none;
+}
+
+select[multiple] {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  color: black !important;
+}
+
+.inline {
+  display: inline-block;
+  margin-right: 10px;
+}

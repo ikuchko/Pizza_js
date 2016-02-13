@@ -15,7 +15,7 @@ Pizza.prototype.pizzaCost = function () {
       break;
     case "large": cost += 12;
       break;
-    case "footlong": cost += 18;
+    case "One meter long": cost += 18;
       break;
   }
   for (var i in this.toppings) {
@@ -39,18 +39,37 @@ function Order (customer, pizzaAmount) {
   this.pizzas = [];
 }
 
-function Topping (toppingName) {
-  this.toppingName = toppingName;
+var fillResultForm = function(order) {
+  $(".total-form").append($());
 }
 
-function Cheese (cheeseName) {
-  this.cheeseName = cheeseName;
-}
+$(document).ready(function() {
+  var pizza = new Pizza;
+  $(".name-form").submit(function(event) {
+    event.preventDefault();
+      var order = new Order($("#customer").val(), parseInt($("#pizzaAmount").val()));
+      $('#name-block').hide();
+      $('#ingredients-block').show();
+  });
 
-function Salad (saladName) {
-  this.saladName = saladName;
-}
+  $("#ingredients-back").click(function() {
+    $('#ingredients-block').hide();
+    $('#name-block').show();
+  });
 
-function Dressing (dressingName) {
-  this.dressingName = dressingName;
-}
+  $("#ingredients-submit").click(function() {
+      pizza.pizzaSize = $("#pizza-size").val();
+      pizza.toppings = $("#pizza-topping").val();
+      pizza.cheeses = $("#pizza-cheese").val();
+      pizza.salads = $("#pizza-salad").val();
+      pizza.dressings = $("#pizza-dressing").val();
+      $('#ingredients-block').hide();
+      $('#result-block').show();
+  });
+
+
+
+  // $("form#play-again").submit(function(event) {
+  //   location.reload(forceGet);
+  // });
+});
