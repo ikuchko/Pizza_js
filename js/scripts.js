@@ -9,11 +9,11 @@ function Pizza (pizzaSize) {
 Pizza.prototype.pizzaCost = function () {
   var cost = 0.00;
   switch (this.pizzaSize) {
-    case "small": cost += 8;
+    case "Small": cost += 8;
       break;
-    case "medium": cost += 10;
+    case "Medium": cost += 10;
       break;
-    case "large": cost += 12;
+    case "Large": cost += 12;
       break;
     case "One meter long": cost += 18;
       break;
@@ -24,10 +24,10 @@ Pizza.prototype.pizzaCost = function () {
   for (var i in this.cheeses) {
     cost += 4;
   }
-  for (var i in this.toppings) {
+  for (var i in this.salads) {
     cost += 2;
   }
-  for (var i in this.toppings) {
+  for (var i in this.dressings) {
     cost += 1;
   }
   return cost;

@@ -9,12 +9,12 @@ describe('Pizza', function() {
  });
 
  it("returns pizza cost", function() {
-   var pizza = new Pizza("small");
+   var pizza = new Pizza("Small");
    pizza.toppings = ["Pre-Cooked Bacon Pieces"];
    pizza.cheeses = ["Parmesan", "Swiss"];
-   pizza.salads = ["Beets"];
+   pizza.salads = ["Beets", "Croutons", "Hyen"];
    pizza.dressings = ["Calzone Sub Sauce"];
-   expect(pizza.pizzaCost()).to.equal(24);
+   expect(pizza.pizzaCost()).to.equal(28);
   });
 });
 
@@ -27,12 +27,12 @@ describe('Order', function() {
 
   it("return total cost for whole customer order", function() {
     var order = new Order("Strugatski")
-    var firstPizza = new Pizza("small");
+    var firstPizza = new Pizza("Small");
     firstPizza.toppings = ["Pre-Cooked Bacon Pieces"];
     firstPizza.cheeses = ["Parmesan", "Swiss"];
     firstPizza.salads = ["Beets"];
     firstPizza.dressings = ["Calzone Sub Sauce"];
-    var secondPizza = new Pizza("large");
+    var secondPizza = new Pizza("Large");
     secondPizza.toppings = ["Pre-Cooked Bacon Pieces"];
     secondPizza.cheeses = ["Parmesan", "Swiss"];
     secondPizza.salads = ["Beets"];
