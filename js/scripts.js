@@ -30,11 +30,18 @@ Pizza.prototype.pizzaCost = function () {
   for (var i in this.toppings) {
     cost += 1;
   }
-  return cost -= 0.01;
+  return cost;
 }
 
-function Order (customer, pizzaAmount) {
+function Order (customer) {
   this.customer = customer;
-  this.pizzaAmount = pizzaAmount;
   this.pizzas = [];
+}
+
+Order.prototype.totalCost = function() {
+  var cost = 0;
+  for (var i in this.pizzas) {
+    cost += this.pizzas[i].pizzaCost();
+  }
+  return cost -= 0.01;
 }

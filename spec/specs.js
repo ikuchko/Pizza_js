@@ -8,50 +8,37 @@ describe('Pizza', function() {
     expect(pizza.dressings).to.eql([]);
  });
 
- it("returns final cost of pizza", function() {
+ it("returns pizza cost", function() {
    var pizza = new Pizza("small");
    pizza.toppings = ["Pre-Cooked Bacon Pieces"];
    pizza.cheeses = ["Parmesan", "Swiss"];
    pizza.salads = ["Beets"];
-   pizza.dressings = ["Beets"];
-   expect(pizza.pizzaCost()).to.equal(23.99);
+   pizza.dressings = ["Calzone Sub Sauce"];
+   expect(pizza.pizzaCost()).to.equal(24);
   });
 });
 
-describe('Pizza', function() {
+describe('Order', function() {
   it("creates a new order object with the given properties", function() {
-    var order = new Order("Cheburashka", 2);
+    var order = new Order("Cheburashka");
     expect(order.customer).to.equal("Cheburashka");
-    expect(order.pizzaAmount).to.equal(2);
     expect(order.pizzas).to.eql([]);
   });
+
+  it("return total cost for whole customer order", function() {
+    var order = new Order("Strugatski")
+    var firstPizza = new Pizza("small");
+    firstPizza.toppings = ["Pre-Cooked Bacon Pieces"];
+    firstPizza.cheeses = ["Parmesan", "Swiss"];
+    firstPizza.salads = ["Beets"];
+    firstPizza.dressings = ["Calzone Sub Sauce"];
+    var secondPizza = new Pizza("large");
+    secondPizza.toppings = ["Pre-Cooked Bacon Pieces"];
+    secondPizza.cheeses = ["Parmesan", "Swiss"];
+    secondPizza.salads = ["Beets"];
+    secondPizza.dressings = ["Calzone Sub Sauce"];
+    order.pizzas.push(firstPizza);
+    order.pizzas.push(secondPizza);
+    expect(order.totalCost()).to.equal(51.99)
+  });
 });
-
-
-// describe('Topping', function() {
-//   it("creates a new topping object with the given properties", function() {
-//     var topping = new Topping("Pre-Cooked Bacon Pieces");
-//     expect(topping.toppingName).to.equal("Pre-Cooked Bacon Pieces");
-//  });
-// });
-//
-// describe('Cheese', function() {
-//   it("creates a new chesse object with the given properties", function() {
-//     var cheese = new Cheese("Parmesan");
-//     expect(cheese.cheeseName).to.equal("Parmesan");
-//  });
-// });
-//
-// describe('Salad', function() {
-//   it("creates a new salad object with the given properties", function() {
-//     var salad = new Salad("Beets");
-//     expect(salad.saladName).to.equal("Beets");
-//  });
-// });
-//
-// describe('Dressing', function() {
-//   it("creates a new dressing object with the given properties", function() {
-//     var dressing = new Dressing("Beets");
-//     expect(dressing.dressingName).to.equal("Beets");
-//  });
-// });
