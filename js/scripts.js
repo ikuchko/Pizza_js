@@ -45,3 +45,13 @@ Order.prototype.totalCost = function() {
   }
   return cost -= 0.01;
 }
+
+Order.prototype.totalAmount = function(size) {
+  var amount = 0;
+  for (var i in this.pizzas) {
+    if (this.pizzas[i].pizzaSize === size) {
+      amount += 1;
+    }
+  }
+  return amount;
+}

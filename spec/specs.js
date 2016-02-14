@@ -41,4 +41,17 @@ describe('Order', function() {
     order.pizzas.push(secondPizza);
     expect(order.totalCost()).to.equal(51.99)
   });
+
+  it("determines amount of pizzas according to size", function() {
+    var order = new Order("Strugatski")
+    var firstPizza = new Pizza("Small");
+    var secondPizza = new Pizza("One meter long");
+    var thirdPizza = new Pizza("One meter long");
+    order.pizzas.push(firstPizza);
+    order.pizzas.push(secondPizza);
+    order.pizzas.push(thirdPizza);
+    expect(order.totalAmount("Small")).to.equal(1);
+    expect(order.totalAmount("One meter long")).to.equal(2);
+    expect(order.totalAmount("Large")).to.equal(0);
+  });
 });
