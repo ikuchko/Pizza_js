@@ -13,15 +13,25 @@ body {
 
 fieldset {
   text-align: center;
-  /*width: 270px;*/
+
   padding: 20px;
   background-color: rgba(238,251,227,0.62);
   box-shadow: 0 0 50px 1px;
   border-radius: 10px;
 }
 
+.center {
+  margin: auto;
+  width: 270px;
+}
+
 #ingredients-block, #result-block  {
   display: none;
+}
+
+input {
+  background-color: rgba(217, 83, 79, 0.09) !important;
+  color: rgb(171, 7, 7) !important;
 }
 
 select[multiple] {
@@ -29,6 +39,10 @@ select[multiple] {
   background-color: rgba(255, 255, 255, 0);
   border: none;
   color: black !important;
+}
+
+option:checked {
+  font-style: oblique;
 }
 
 .inline {
