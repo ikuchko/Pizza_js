@@ -1,5 +1,6 @@
 body {
-  background: url("http://www.italia.it/fileadmin/src/img/cluster_gallery/mangiare_bere/la_pizza/_0004_pizza_focaccia.jpg") no-repeat center center fixed;
+  background: url("../img/pizza_focaccia.jpg")
+  no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -20,6 +21,11 @@ fieldset {
   border-radius: 10px;
 }
 
+.cost {
+  text-align: right;
+  font-size: 16px;
+}
+
 .center {
   margin: auto;
   width: 270px;
@@ -34,7 +40,7 @@ input {
   color: rgb(171, 7, 7) !important;
 }
 
-select[multiple] {
+select[multiple], .size-select {
   height: 100px;
   background-color: rgba(255, 255, 255, 0);
   border: none;
@@ -48,4 +54,17 @@ option:checked {
 .inline {
   display: inline-block;
   margin-right: 10px;
+}
+
+h1 {
+  font-size: 72px;
+  font-family: 'Allura', cursive;
+  text-align: center;
+  color: #9C0707;
+}
+
+input, h2{
+  font-family: 'Lobster Two', cursive;
+  font-size: 22px !important;
+  font-style: italic;
 }
