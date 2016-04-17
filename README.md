@@ -1,6 +1,6 @@
 # PIZZA
 
-##### Epicodus fridays code review
+##### 
 
 ### By Illia Kuchko
 
@@ -8,7 +8,7 @@
 
 ## Description
 
-PIZZA application, created to collect customers pizza orders.
+PIZZA application, created to collect customers pizza orders. Demonstrate OO approach in JavaScript.
 
 ## Setup
 
